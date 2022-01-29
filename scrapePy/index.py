@@ -9,3 +9,16 @@ driver.get('http://google.com/')
 
 
 print('Waiting...')
+
+
+
+
+from selenium import webdriver
+ 
+ 
+driver = webdriver.Firefox()
+driver.get("https://ceo.life-cm.com/")
+
+message = driver.find_elements_by_tag_name('h3')
+for i in message:
+    print(i.text)
