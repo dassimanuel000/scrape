@@ -1,0 +1,73 @@
+
+#
+with open('ouput.json', 'w') as f:
+    for item in link:
+        f.write("%s\n" % item)
+
+
+for i in message:
+    #link.append(message)
+    print(message)
+for i in message:
+    print(i.text)
+
+
+from selenium import webdriver
+ 
+ 
+driver = webdriver.Firefox()
+driver.get("https://www.crit-job.com/offres/advancedSearch/?token=a21d05fd9c4d24bdfc91cbed1b9cc469")
+
+link = []
+
+message = driver.find_elements_by_class_name("title_offer_box")
+print(message.text)
+
+
+
+with open("res.json") as f:
+     for line in f:
+        f.write("%s\n" % links)
+
+
+///VERSION UUNE 
+
+
+
+from selenium import webdriver
+import time
+ 
+ 
+driver = webdriver.Firefox()
+driver.get("https://www.crit-job.com/offres/advancedSearch?page=1&token=a21d05fd9c4d24bdfc91cbed1b9cc469")
+
+time.sleep(3)
+#On attend la page charge
+print('ok on attend 5sec')
+
+driver.find_element_by_id('tarteaucitronPersonalize2').click()
+#On valide les cookies
+
+links = driver.find_elements_by_xpath('//h2[contains(@class, "title_offer_box")]//a[contains(@href, "offres")]')
+for i in links:
+    print(i.get_attribute('href'))
+
+
+/////////////////////////////////////
+
+
+a = [1, 2, 3]
+b = [10, 20]
+
+a = a + b # Create a new list a+b and assign back to a.
+print a
+# [1, 2, 3, 10, 20]
+
+
+# Equivalently:
+a = [1, 2, 3]
+b = [10, 20]
+
+a += b
+print a
+# [1, 2, 3, 10, 20]
