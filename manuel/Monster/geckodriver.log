@@ -722,3 +722,5 @@ JavaScript error: https://life-cm.com/welcome/js/main.js, line 30: TypeError: ba
 JavaScript error: https://life-cm.com/welcome/js/main.js, line 30: TypeError: backToTo is null
 JavaScript error: https://life-cm.com/welcome/js/main.js, line 30: TypeError: backToTo is null
 JavaScript error: https://life-cm.com/welcome/js/main.js, line 30: TypeError: backToTo is null
+1644342865051	Marionette	INFO	Stopped listening on port 37221
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
