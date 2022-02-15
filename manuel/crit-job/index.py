@@ -9,7 +9,7 @@ final_result = list()
 
 
 driver = webdriver.Firefox()
-driver.get("https://www.crit-job.com/offres/advancedSearch?page=1&token=a21d05fd9c4d24bdfc91cbed1b9cc469")
+driver.get("https://www.crit-job.com/offres?page_limit=60&token=4f5f9c927a20179c1c361adfb8dce24c")
 
 time.sleep(3)
 #On attend la page charge
@@ -60,14 +60,24 @@ for j in my_list:
     telephone = driver.find_element_by_xpath("/html/body/div[4]/div/section/div[1]/div[1]/div/section/p[3]").text
     print(telephone)
 
+    contrat = "CDI"
+    salary = "A Définir"
+    statut = "Cadre du secteur privé"
+    experience = "Tous niveaux d'expérience acceptés"
+
+
     myDict = {}
-    myDict["nom"] = nom
-    myDict["titre"] = titre
-    myDict["description"] = description
-    myDict["addresse"] = addresse
-    myDict["travail"] = travail
     myDict["date"] = date
-    myDict["telephone"] = telephone
+    myDict["url"] = j
+    myDict["titre"] = titre
+    myDict["ville"] = addresse
+    myDict["contrat"] = contrat
+    myDict["description"] = description
+    myDict["salary"] = salary
+    myDict["metier"] = travail
+    myDict["statut"] = telephone
+    myDict["secteur"] = nom
+    myDict["experience"] = experience
 
     #print(myDict)
 
@@ -78,5 +88,5 @@ for j in my_list:
 with open("res.json", "wb") as writeJSON:
    jsStr = json.dumps(final_result)
    # the decode() needed because we need to convert it to binary
-   writeJSON.write(jsStr.decode('utf-8')) 
+   writeJSON.write(jsStr.encode('utf-8')) 
 print ('end')

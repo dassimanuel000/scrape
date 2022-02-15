@@ -1116,3 +1116,55 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1643738816418	Marionette	INFO	Stopped listening on port 42369
 console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
 JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1644509603615	geckodriver	INFO	Listening on 127.0.0.1:55483
+1644509606692	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55484" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile7KGeXH"
+1644509607437	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile7KGeXH\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55484/devtools/browser/396762cf-c0ea-430c-83d4-1e0de2077a3d
+1644509610976	Marionette	INFO	Listening on port 55490
+1644509611025	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+1644510208492	Marionette	INFO	Stopped listening on port 55491644510209999	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49257" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileCnqeVW"
+1644510210554	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileCnqeVW\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49257/devtools/browser/1236b7dc-3c8f-4a19-9cd5-ed52ec6b67b9
+1644510213516	Marionette	INFO	Listening on port 49263
+1644510213685	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.crit-job.com"
+1644511413414	Marionette	INFO	Stopped listening on port 49263
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
