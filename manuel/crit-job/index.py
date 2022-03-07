@@ -7,8 +7,9 @@ my_list = list()
 
 final_result = list()
 
-
-driver = webdriver.Firefox()
+#driver = webdriver.Firefox()
+driver = webdriver.Firefox(executable_path=r'C:\Python310\geckodriver.exe')
+driver.get("https://google.com/")
 driver.get("https://www.crit-job.com/offres?page_limit=60&token=4f5f9c927a20179c1c361adfb8dce24c")
 
 time.sleep(3)

@@ -1,0 +1,54 @@
+1645444168320	geckodriver	INFO	Listening on 127.0.0.1:49695
+1645444171422	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49696" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileOWHCPY"
+1645444175891	geckodriver	INFO	Listening on 127.0.0.1:49707
+1645444178927	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49708" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilewj2dNU"
+1645444181130	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilewj2dNU\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49708/devtools/browser/b7022f85-83a9-4a8f-ad63-2c707ab388c0
+1645444184721	Marionette	INFO	Listening on port 49739
+1645444184915	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://dev.life-cm.com/assets/js/demo.js, line 43: ReferenceError: statisticsChart is not defined
+1645444217930	Marionette	INFO	Stopped listening on port 49739
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][PContentChild] Error: Send(msgname=PBrowser::Msg___delete__) Channel closing: too late to send/recv, messages will be lost
+
+en the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileV73Ca2\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49853/devtools/browser/3170360c-c447-4a57-8e9a-03f06e65f3ef
+1645444200110	Marionette	INFO	Listening on port 49858
+1645444200550	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://dev.life-cm.com/assets/js/demo.js, line 43: ReferenceError: statisticsChart is not defined
+1645444221578	Marionette	INFO	Stopped listening on port 49858
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1645444485392	geckodriver	INFO	Listening on 127.0.0.1:63038
+1645444488433	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63039" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileMBfCRx"
+1645444489080	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileMBfCRx\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63039/devtools/browser/4d90c57b-cc04-4b7e-97e5-b1340c355589
+1645444492256	Marionette	INFO	Listening on port 63045
+1645444492637	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://dev.life-cm.com/assets/js/demo.js, line 43: ReferenceError: statisticsChart is not defined
+1645444546312	Marionette	INFO	Stopped listening on port 63045
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "63137" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileofWaPG"
+1645444536629	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileofWaPG\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63137/devtools/browser/fbdaaf85-9890-4463-96bc-022001961c6a
+1645444540173	Marionette	INFO	Listening on port 63144
+1645444540196	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://dev.life-cm.com/assets/js/demo.js, line 43: ReferenceError: statisticsChart is not defined
+1645444753680	geckodriver	INFO	Listening on 127.0.0.1:63335
+1645444756757	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63336" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile6M3Liu"
+1645444757333	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile6M3Liu\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63336/devtools/browser/e96e97ae-5974-4989-9928-b5ff5cf2f61e
+1645444760432	Marionette	INFO	Listening on port 63343
+1645444760468	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://dev.life-cm.com/assets/js/demo.js, line 43: ReferenceError: statisticsChart is not defined
+Invalid port. Exiting...

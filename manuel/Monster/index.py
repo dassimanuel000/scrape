@@ -23,11 +23,12 @@ def scroll_function(i):
     
 TAG_RE = re.compile(r'<[^>]+>')
 def remove_tags(description):
-    return TAG_RE.sub('', description)
+    return TAG_RE.sub(' ', description)
 
 #actif = input("Nous pas de diminuer la taille d'ecran :\n")
 
-driver = webdriver.Firefox()
+#driver = webdriver.Firefox()
+driver = webdriver.Firefox(executable_path=r'C:\Python310\geckodriver.exe')
 driver.get("https://google.com/")
 
 print('ok on attend 5sec')
@@ -39,7 +40,7 @@ else:
     print("Init Google...")
     #On valide les cookies
     driver.get("https://www.monster.com/")
-    time.sleep(3)
+    time.sleep(1)
     #On attend la page charge
     print("On attend le site charge...")
     vocation = input("Entrer le type de métiers à récupérer:\n")
@@ -64,7 +65,7 @@ else:
     input("PAGE DES RESULTATS OUVERTS CLIQUEZ QUELQUES PART | ELARGIT L'ÉCRAN \n")
     time.sleep(2)
 
-    #firstReslut = driver.find_element_by_xpath("/html/body/div[1]/div[3]/main/div[2]/nav/section[1]/div[2]/div[1]/div/div/div/div/div[1]/article").click()
+    #firstReslut = driver.find_element_by_xpath("/html/body/div[1]/div[3]/div[1]/main/div[2]/nav/section[1]/div[2]/div[1]/div/div/div/div/div[1]/article").click()
     
     #SI IL Y A PLUSIEURS RESULTATS N'HESITE PAS A AUGMENTER LE range
     for i in range(12):
@@ -92,16 +93,16 @@ else:
     for i in range(1, count):
         time.sleep(2)
         print('ok on attend 2sec---------------------------------------------------------------------------------------')
-        countReslut = driver.find_element_by_xpath("/html/body/div[1]/div[3]/main/div[2]/nav/section[1]/div[2]/div[1]/div/div/div/div/div["+ str(i) +"]/article").click()
-
+        countReslut = driver.find_element_by_xpath("/html/body/div[1]/div[3]/div[1]/main/div[2]/nav/section[1]/div[2]/div[1]/div/div/div/div/div["+ str(i) +"]/article").click()
+        
         try:
-            date = driver.find_element_by_xpath("/html/body/div[1]/div[3]/main/div[2]/nav/section[1]/div[2]/div[1]/div/div/div/div/div["+ str(i) +"]/article/footer/div/span").text
+            date = driver.find_element_by_xpath("/html/body/div[1]/div[3]/div[1]/main/div[2]/nav/section[1]/div[2]/div[1]/div/div/div/div/div["+ str(i) +"]/article/footer/div/span").text
         except NoSuchElementException:  #spelling error making this code not work as expected
             date = datetime.today().strftime('%Y-%m-%d-%H:%M:%S')
             pass
         print(date)
 
-        url = driver.find_elements_by_xpath("/html/body/div[1]/div[3]/main/div[2]/nav/section[1]/div[2]/div[1]/div/div/div/div/div["+ str(i) +"]/article/div/a")
+        url = driver.find_elements_by_xpath("/html/body/div[1]/div[3]/div[1]/main/div[2]/nav/section[1]/div[2]/div[1]/div/div/div/div/div["+ str(i) +"]/article/div/a")
         for i in url:
             url = (i.get_attribute('href'))
         print(url)
@@ -150,6 +151,7 @@ else:
         print(salary)
 
         try:
+            contrat = "CDI"
             contrats = driver.find_elements_by_xpath('//div[contains(@class, "detailsstyles__")]//div[contains(@data-test-id, "svx-jobview-employmenttype")]')
             for i_contrat in contrats:
                 contrat = (i_contrat.get_attribute('innerHTML'))
