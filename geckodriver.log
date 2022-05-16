@@ -1,0 +1,1376 @@
+1652688474142	geckodriver	INFO	Listening on 127.0.0.1:55978
+1652688477203	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55979" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilewxki2Q"
+1652688477722	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilewxki2Q\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55979/devtools/browser/74ff1393-2e05-4d09-bbd3-9dbfc5728a1f
+1652688479943	Marionette	INFO	Listening on port 55984
+1652688480435	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652688484417	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652688489323	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+1652688576912	Marionette	INFO	Stopped listening on port 55984
+1652688577892	geckodriver	INFO	Listening on 127.0.0.1:56085
+1652688580937	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56086" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile7SJtNg"
+1652688581494	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile7SJtNg\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56086/devtools/browser/b45be469-916f-4b34-a3c3-e82fde8399b4
+1652688583664	Marionette	INFO	Listening on port 56092
+1652688584175	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652688586731	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652688592924	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652688677739	Marionette	INFO	Stopped listening on port 56092
+1652688678859	geckodriver	INFO	Listening on 127.0.0.1:56196
+1652688681908	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56197" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilekOvE6U"
+1652688682383	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilekOvE6U\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56197/devtools/browser/23e5d2de-9d6b-4535-bb6a-d171a1c4e455
+1652688684603	Marionette	INFO	Listening on port 56202
+1652688685115	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652688687328	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652688691428	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652688739509	Marionette	INFO	Stopped listening on port 56202
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NS_ERROR_FAILURE
+1652688740730	geckodriver	INFO	Listening on 127.0.0.1:56324
+1652688743778	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56325" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilemhFb7g"
+1652688744321	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilemhFb7g\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56325/devtools/browser/5b32c06a-ca2a-415d-8346-a9fce1021fd1
+1652688746457	Marionette	INFO	Listening on port 56330
+1652688746484	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652688759490	Marionette	INFO	Stopped listening on port 56330
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NS_ERROR_FAILURE
+1652688760304	geckodriver	INFO	Listening on 127.0.0.1:56417
+1652688763362	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56418" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile7siKhe"
+1652688763829	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile7siKhe\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56418/devtools/browser/917fd012-51ce-41f2-9c8b-90d34f0b2b8b
+1652688765928	Marionette	INFO	Listening on port 56423
+1652688766050	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652688852920	Marionette	INFO	Stopped listening on port 56423
+1652688854283	geckodriver	INFO	Listening on 127.0.0.1:60246
+1652688857350	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60247" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileF4SoiI"
+1652688857992	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileF4SoiI\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60247/devtools/browser/92f50b17-fa7f-4f42-afd9-214311a69aad
+1652688860167	Marionette	INFO	Listening on port 60273
+1652688860532	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652688943740	Marionette	INFO	Stopped listening on port 60273
+
+###!!! [Child][PContentChild] Error: Send(msgname=PHttpChannel::Msg___delete__) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: Send(msgname=PNecko::Msg_RemoveRequestContext) Channel closing: too late to send/recv, messages will be lost
+
+1652688944843	geckodriver	INFO	Listening on 127.0.0.1:60454
+1652688947875	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60455" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofiledsLk2f"
+1652688948326	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofiledsLk2f\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60455/devtools/browser/6b0a7289-17f6-40f5-b0ea-5e67e8f3dec2
+1652688950378	Marionette	INFO	Listening on port 60461
+1652688950566	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652689040003	Marionette	INFO	Stopped listening on port 60461
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+1652689041259	geckodriver	INFO	Listening on 127.0.0.1:53570
+1652689044308	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53571" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileVKWluv"
+1652689044721	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileVKWluv\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53571/devtools/browser/0f60de84-be01-47b9-b0be-7d0c12c1a32b
+1652689046628	Marionette	INFO	Listening on port 53576
+1652689046995	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652689048638	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652689053607	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+1652689136470	Marionette	INFO	Stopped listening on port 53576
+1652689137283	geckodriver	INFO	Listening on 127.0.0.1:53678
+1652689140355	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53679" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileKXBQJX"
+1652689140761	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileKXBQJX\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53679/devtools/browser/d5221bcb-2f20-4fae-a37c-212500e634c4
+1652689142612	Marionette	INFO	Listening on port 53684
+1652689143029	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652689145152	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652689151216	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652689156481	Marionette	INFO	Stopped listening on port 53684
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NS_ERROR_FAILURE
+1652689157286	geckodriver	INFO	Listening on 127.0.0.1:53766
+1652689160354	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53767" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileG0wefm"
+1652689160757	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileG0wefm\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53767/devtools/browser/e511ae59-50b2-415b-b07a-ab3f30453102
+1652689162858	Marionette	INFO	Listening on port 53773
+1652689163043	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652689164917	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652689169577	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652689174849	Marionette	INFO	Stopped listening on port 53773
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NS_ERROR_FAILURE
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652689175717	geckodriver	INFO	Listening on 127.0.0.1:53857
+1652689178765	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53858" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileUHaP6o"
+1652689179168	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileUHaP6o\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53858/devtools/browser/1380d6ba-d519-46e5-8a6b-0364da9e0889
+1652689181015	Marionette	INFO	Listening on port 53864
+1652689181448	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652689183486	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652689194213	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652689269106	Marionette	INFO	Stopped listening on port 53864
+1652689270059	geckodriver	INFO	Listening on 127.0.0.1:49549
+1652689273089	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49550" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofiled8Zlga"
+1652689273498	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofiled8Zlga\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49550/devtools/browser/878b500c-d5e8-4931-9a62-27d78c047a90
+1652689275386	Marionette	INFO	Listening on port 49555
+1652689275791	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652689277736	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652689356199	Marionette	INFO	Stopped listening on port 49555
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652689357274	geckodriver	INFO	Listening on 127.0.0.1:49653
+1652689360333	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49654" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile824d12"
+1652689360754	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile824d12\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49654/devtools/browser/3be4676e-59db-4445-ad98-d7b988535aad
+1652689362855	Marionette	INFO	Listening on port 49659
+1652689363010	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652689413957	Marionette	INFO	Stopped listening on port 49659
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DestroyBrowsingContextGroup) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NS_ERROR_FAILURE
+1652689415010	geckodriver	INFO	Listening on 127.0.0.1:49856
+1652689418058	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49857" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileuJF7jF"
+1652689418495	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileuJF7jF\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49857/devtools/browser/11fe3cf6-efa0-4073-9dc3-f30738129cac
+1652689420448	Marionette	INFO	Listening on port 49862
+1652689420758	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652689422959	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652689428469	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-provider-company-info/dist/c6a02a7d11560a932403/js/CompanyInfoSalary-client.js?1, line 2: Error: Loading CSS chunk 933 failed.
+(https://d3fw5vlhllyvee.cloudfront.net/mosaic-provider-company-info/dist/104d4943d4646979f49f/css/CompanyInfoSalary.css)
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652689534665	Marionette	INFO	Stopped listening on port 49862
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652689535573	geckodriver	INFO	Listening on 127.0.0.1:50123
+1652689538837	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50124" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilesDIzfw"
+1652689539321	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilesDIzfw\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50124/devtools/browser/3b86fd78-4b5e-4620-8f94-3418ed531bf1
+1652689541277	Marionette	INFO	Listening on port 50129
+1652689541615	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652689547753	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+1652689607046	Marionette	INFO	Stopped listening on port 50129
+1652689608298	geckodriver	INFO	Listening on 127.0.0.1:50331
+1652689611383	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50332" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileHhNaNW"
+1652689611787	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileHhNaNW\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50332/devtools/browser/f39c9e48-a936-40fc-8efd-0491d464b278
+1652689613537	Marionette	INFO	Listening on port 50337
+1652689613596	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652689615527	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652689620800	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-provider-company-info/dist/c6a02a7d11560a932403/js/CompanyInfoSalary-client.js?1, line 2: Error: Loading CSS chunk 933 failed.
+(https://d3fw5vlhllyvee.cloudfront.net/mosaic-provider-company-info/dist/104d4943d4646979f49f/css/CompanyInfoSalary.css)
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652689695294	Marionette	INFO	Stopped listening on port 50337
+1652689696294	geckodriver	INFO	Listening on 127.0.0.1:57599
+1652689699372	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57700" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileTh97Ww"
+1652689699893	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileTh97Ww\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57700/devtools/browser/42f8b13d-0915-4ce8-b61e-5930fb334fc6
+1652689701658	Marionette	INFO	Listening on port 57824
+1652689702094	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652689704042	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652689707980	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652689713282	Marionette	INFO	Stopped listening on port 57824
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NS_ERROR_FAILURE
+1652689714054	geckodriver	INFO	Listening on 127.0.0.1:57920
+1652689717133	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57921" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilefnh8Zk"
+1652689717532	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilefnh8Zk\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57921/devtools/browser/a4115b76-0304-43bf-af1d-b78bb4877b52
+1652689719312	Marionette	INFO	Listening on port 57926
+1652689719853	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652689810413	Marionette	INFO	Stopped listening on port 57926
+1652689812021	geckodriver	INFO	Listening on 127.0.0.1:58120
+1652689815103	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58121" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileyJ85lR"
+1652689815539	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileyJ85lR\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58121/devtools/browser/972d0087-61d4-4673-b14e-1c8f89819c16
+1652689817557	Marionette	INFO	Listening on port 58126
+1652689817874	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652689820365	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652689827009	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652689916056	Marionette	INFO	Stopped listening on port 58126
+1652689916820	geckodriver	INFO	Listening on 127.0.0.1:61461
+1652689919911	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61462" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilehQORm4"
+1652689920315	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilehQORm4\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61462/devtools/browser/3c515262-8877-4435-8650-9481df27ccba
+1652689922057	Marionette	INFO	Listening on port 61467
+1652689922118	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652689924312	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652689930927	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652690012396	Marionette	INFO	Stopped listening on port 61467
+1652690013133	geckodriver	INFO	Listening on 127.0.0.1:50964
+1652690016236	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50965" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileLM6MuC"
+1652690016629	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileLM6MuC\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50965/devtools/browser/e27b578b-3957-4626-816c-f7e6e5d6e08b
+1652690018331	Marionette	INFO	Listening on port 50970
+1652690018439	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652690020732	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652690026473	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652690028758	Marionette	INFO	Stopped listening on port 50970
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NS_ERROR_FAILURE
+1652690029686	geckodriver	INFO	Listening on 127.0.0.1:51054
+1652690032732	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51055" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilejdU2GS"
+1652690033175	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilejdU2GS\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51055/devtools/browser/195e38b0-191a-49df-8dea-7095526d5ac0
+1652690035038	Marionette	INFO	Listening on port 51060
+1652690035431	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652690043536	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652690125390	Marionette	INFO	Stopped listening on port 51060
+1652690126227	geckodriver	INFO	Listening on 127.0.0.1:51150
+1652690129303	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51151" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile3rmECl"
+1652690129681	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile3rmECl\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51151/devtools/browser/76c2f10d-460f-41f9-a190-5f3df397d1b9
+1652690131404	Marionette	INFO	Listening on port 51156
+1652690131495	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: uncaught exception: undefined
+1652690224187	Marionette	INFO	Stopped listening on port 51156
+1652690224973	geckodriver	INFO	Listening on 127.0.0.1:62508
+1652690228061	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62509" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileiD5xYY"
+1652690228459	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileiD5xYY\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62509/devtools/browser/3632488d-5265-4e53-ad50-bd7f485045b2
+1652690230190	Marionette	INFO	Listening on port 62515
+1652690230252	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652690233563	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652690239495	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652690304036	Marionette	INFO	Stopped listening on port 62515
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652690305021	geckodriver	INFO	Listening on 127.0.0.1:62611
+1652690308064	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62612" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile6e1JDB"
+1652690308453	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile6e1JDB\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62612/devtools/browser/10cc2bb0-3324-4062-8de5-3ef1c5e040c8
+1652690310550	Marionette	INFO	Listening on port 62617
+1652690310726	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652690314356	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652690319135	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652690393689	Marionette	INFO	Stopped listening on port 62617
+1652690394718	geckodriver	INFO	Listening on 127.0.0.1:62709
+1652690397796	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62710" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile9V0kfL"
+1652690398224	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile9V0kfL\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62710/devtools/browser/38ae4d10-e274-4b90-99f6-df877a6dad0e
+1652690400374	Marionette	INFO	Listening on port 62715
+1652690400506	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652690404645	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652690410287	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652690412566	Marionette	INFO	Stopped listening on port 62715
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NS_ERROR_FAILURE
+1652690413471	geckodriver	INFO	Listening on 127.0.0.1:62817
+1652690416543	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62818" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileuiRcjX"
+1652690416937	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileuiRcjX\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62818/devtools/browser/90640226-680b-4719-ace6-eb22634d1cff
+1652690418721	Marionette	INFO	Listening on port 62823
+1652690418744	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652690420705	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652690424760	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652690437438	Marionette	INFO	Stopped listening on port 62823
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NS_ERROR_FAILURE
+1652690438261	geckodriver	INFO	Listening on 127.0.0.1:49157
+1652690441350	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49158" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileIeMJmP"
+1652690441732	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileIeMJmP\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49158/devtools/browser/36d53e06-b461-4126-b22c-bb558d41d4e5
+1652690443507	Marionette	INFO	Listening on port 49163
+1652690443538	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652690445653	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652690451432	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652690531631	Marionette	INFO	Stopped listening on port 49163
+1652690532760	geckodriver	INFO	Listening on 127.0.0.1:49252
+1652690535823	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49253" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile7YncI4"
+1652690536262	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile7YncI4\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49253/devtools/browser/152bb82d-254d-43d9-81d3-eb6fe94e9774
+1652690537976	Marionette	INFO	Listening on port 49258
+1652690538026	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652690539989	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652690546581	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652690634292	Marionette	INFO	Stopped listening on port 49258
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652690635316	geckodriver	INFO	Listening on 127.0.0.1:52864
+1652690638410	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52865" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileN8ThZC"
+1652690638808	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileN8ThZC\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52865/devtools/browser/6a4b225a-e867-4502-8388-91c1beccb6b8
+1652690640527	Marionette	INFO	Listening on port 52870
+1652690640619	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652690642563	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652690646343	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: uncaught exception: undefined
+1652690727921	Marionette	INFO	Stopped listening on port 52870
+1652690728995	geckodriver	INFO	Listening on 127.0.0.1:52990
+1652690732081	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52991" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilemO6yaM"
+1652690732468	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilemO6yaM\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52991/devtools/browser/d0ab6564-68a4-4e71-a340-4aadb1835725
+1652690734359	Marionette	INFO	Listening on port 52997
+1652690734784	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652690736775	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652690742598	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652690824018	Marionette	INFO	Stopped listening on port 52997
+1652690825014	geckodriver	INFO	Listening on 127.0.0.1:53314
+1652690828103	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53315" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilegc8bJW"
+1652690828497	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilegc8bJW\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53315/devtools/browser/7d9556cf-4139-4735-bf4d-80ebf1a8fd88
+1652690830633	Marionette	INFO	Listening on port 53321
+1652690830814	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652690832829	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652690836702	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652690920215	Marionette	INFO	Stopped listening on port 53321
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652690920975	geckodriver	INFO	Listening on 127.0.0.1:53454
+1652690924056	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53455" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileeph2a6"
+1652690924444	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileeph2a6\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53455/devtools/browser/146c3f46-976f-42a1-bc90-db97c0398cab
+1652690926141	Marionette	INFO	Listening on port 53461
+1652690926167	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652690927962	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652690956998	Marionette	INFO	Stopped listening on port 53461
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NS_ERROR_FAILURE
+1652690957875	geckodriver	INFO	Listening on 127.0.0.1:53559
+1652690960948	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53560" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileumVE3K"
+1652690961498	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileumVE3K\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53560/devtools/browser/c9bbf01e-3f1d-495f-8770-611c2959d3b2
+1652690963256	Marionette	INFO	Listening on port 53566
+1652690963652	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652690965858	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652690970732	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652691049439	Marionette	INFO	Stopped listening on port 53566
+1652691050417	geckodriver	INFO	Listening on 127.0.0.1:53956
+1652691053507	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53957" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilenBGt8F"
+1652691053896	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilenBGt8F\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53957/devtools/browser/a9748caa-998c-492c-b920-05874b4176f9
+1652691055608	Marionette	INFO	Listening on port 53964
+1652691055701	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652691057748	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652691063685	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652691143853	Marionette	INFO	Stopped listening on port 53964
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652691144869	geckodriver	INFO	Listening on 127.0.0.1:54100
+1652691147960	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54101" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile4FNdVD"
+1652691148344	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile4FNdVD\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54101/devtools/browser/e4d38b1c-3fd1-4067-b5e6-8550d4943d10
+1652691150201	Marionette	INFO	Listening on port 54109
+1652691150663	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652691153069	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652691157450	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+1652691217178	Marionette	INFO	Stopped listening on port 54109
+1652691218136	geckodriver	INFO	Listening on 127.0.0.1:54229
+1652691221207	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54230" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileZ0N7aP"
+1652691221587	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileZ0N7aP\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54230/devtools/browser/820e6d58-81d6-4563-a732-bee7b11130b1
+1652691223439	Marionette	INFO	Listening on port 54236
+1652691223909	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652691226142	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652691231838	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652691311628	Marionette	INFO	Stopped listening on port 54236
+1652691312618	geckodriver	INFO	Listening on 127.0.0.1:54371
+1652691315691	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54372" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileuyKO2h"
+1652691316119	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileuyKO2h\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54372/devtools/browser/fb2c526a-9305-457d-983e-b0a16b1096b8
+1652691318010	Marionette	INFO	Listening on port 54379
+1652691318403	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652691320796	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652691324606	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652691327315	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652691409040	Marionette	INFO	Stopped listening on port 54379
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652691410075	geckodriver	INFO	Listening on 127.0.0.1:54518
+1652691413153	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54519" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilerAGcJO"
+1652691413545	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilerAGcJO\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54519/devtools/browser/8f851635-41f3-4cf5-a6f1-6bc53f420fb3
+1652691415945	Marionette	INFO	Listening on port 54525
+1652691416354	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652691419114	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652691425347	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652691505616	Marionette	INFO	Stopped listening on port 54525
+1652691506370	geckodriver	INFO	Listening on 127.0.0.1:54163
+1652691509444	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54164" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileEtHxCI"
+1652691509843	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileEtHxCI\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54164/devtools/browser/440ca9cb-3dc7-4ba7-955d-ff08df1e9706
+1652691511708	Marionette	INFO	Listening on port 54170
+1652691512149	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652691514040	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652691517920	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652691603550	Marionette	INFO	Stopped listening on port 54170
+1652691604280	geckodriver	INFO	Listening on 127.0.0.1:54314
+1652691607356	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54315" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile4IzLnW"
+1652691607735	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile4IzLnW\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54315/devtools/browser/9bcb24ce-2c09-4eb9-b3a0-d32b91c96e40
+1652691609602	Marionette	INFO	Listening on port 54321
+1652691610063	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652691682086	Marionette	INFO	Stopped listening on port 54321
+1652691683149	geckodriver	INFO	Listening on 127.0.0.1:54445
+1652691686238	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54446" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile0y9NfR"
+1652691686634	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile0y9NfR\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54446/devtools/browser/d301fa34-ceef-46ec-a64d-0d4033fe1535
+1652691688461	Marionette	INFO	Listening on port 54452
+1652691688951	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652691693470	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652691699751	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652691789109	Marionette	INFO	Stopped listening on port 54452
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652691789889	geckodriver	INFO	Listening on 127.0.0.1:53225
+1652691792937	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53226" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileLyeB4O"
+1652691793391	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileLyeB4O\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53226/devtools/browser/e3428ea3-7330-4ed8-9246-b9cecc8b25b2
+1652691795464	Marionette	INFO	Listening on port 53232
+1652691795638	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652691797828	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652691803783	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652691808044	Marionette	INFO	Stopped listening on port 53232
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NS_ERROR_FAILURE
+1652691808838	geckodriver	INFO	Listening on 127.0.0.1:53320
+1652691811913	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53321" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileVuaha0"
+1652691812321	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileVuaha0\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53321/devtools/browser/2634c9ee-d7cf-4e68-9ab7-bf3bc774d61c
+1652691814075	Marionette	INFO	Listening on port 53327
+1652691814457	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652691816889	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652691822282	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652691905125	Marionette	INFO	Stopped listening on port 53327
+1652691906442	geckodriver	INFO	Listening on 127.0.0.1:53467
+1652691909538	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53468" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileYy3lBs"
+1652691909930	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileYy3lBs\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53468/devtools/browser/40398d15-a0e1-4ebb-a300-c68741977952
+1652691911654	Marionette	INFO	Listening on port 53474
+1652691911731	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652691913786	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652691920310	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/c340b001bfd2a9d409ee/scripts/index.js?cacheKey=1&1, line 2: Error: Unable to load mosaic-provider-reportcontent because it was not initialized or was eagerly loaded. Check that the host backend received a valid provider response and that the final merged provider configuration has isLazy = true
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1652692003512	Marionette	INFO	Stopped listening on port 53474
+1652692276585	geckodriver	INFO	Listening on 127.0.0.1:58122
+1652692279691	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58123" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileco56AJ"
+1652692280089	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileco56AJ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58123/devtools/browser/a55021b2-5057-4198-bc05-15a01f0afa6d
+1652692281926	Marionette	INFO	Listening on port 58129
+1652692282395	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652692313285	Marionette	INFO	Stopped listening on port 58129
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NS_ERROR_FAILURE
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+ew profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileIeJewg\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58172/devtools/browser/c668deaa-3c74-4ac6-9cfa-ac1b0245bc64
+1652692289617	Marionette	INFO	Listening on port 58192
+1652692290041	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652692314016	Marionette	INFO	Stopped listening on port 58192
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NS_ERROR_FAILURE
+1652693333003	geckodriver	INFO	Listening on 127.0.0.1:51123
+1652693336075	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51124" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilenBqqnk"
+1652693336492	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilenBqqnk\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51124/devtools/browser/c5fd64a3-9f4f-48b7-ad72-563362c6cd68
+1652693338321	Marionette	INFO	Listening on port 51131
+1652693338795	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652693369437	Marionette	INFO	Stopped listening on port 51131
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NS_ERROR_FAILURE
+\\Temp\\rust_mozprofileU8xT0T"
+1652693343865	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileU8xT0T\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51170/devtools/browser/f24987a8-105b-4725-9b1c-2365eed46891
+1652693345965	Marionette	INFO	Listening on port 51197
+1652693346134	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652693368923	Marionette	INFO	Stopped listening on port 51197
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NS_ERROR_FAILURE
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+ew profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilesZJvhs\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51236/devtools/browser/c8735df8-8bf7-40a1-a4d0-bc7eb8c2f0b2
+1652693352948	Marionette	INFO	Listening on port 51256
+1652693353259	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652693370227	Marionette	INFO	Stopped listening on port 51256
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NS_ERROR_FAILURE
+1652693481183	geckodriver	INFO	Listening on 127.0.0.1:51391
+1652693484235	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51392" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileIg6wP3"
+1652693484651	Marionette	INFO	Marionette enabled
+1652713804687	geckodriver	INFO	Listening on 127.0.0.1:49260
+1652713808005	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49261" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilefKpv7S"
+1652713808528	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilefKpv7S\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49261/devtools/browser/fe60bddc-3869-48e1-be4d-4304d846e474
+1652713810475	Marionette	INFO	Listening on port 49266
+1652713810697	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652713819016	Marionette	INFO	Stopped listening on port 49266
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NS_ERROR_FAILURE
+1652713966939	geckodriver	INFO	Listening on 127.0.0.1:56300
+1652713969981	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56301" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile6fx7P8"
+1652713970409	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile6fx7P8\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56301/devtools/browser/ecc6a48f-5cdb-41e1-9166-e5ae7f3d28e7
+1652713972250	Marionette	INFO	Listening on port 56307
+1652713972381	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652713974170	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652713982179	Marionette	INFO	Stopped listening on port 56307
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NS_ERROR_FAILURE
+1652713993772	geckodriver	INFO	Listening on 127.0.0.1:56371
+1652713996824	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56372" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileQyYrV6"
+1652713997273	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileQyYrV6\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56372/devtools/browser/0fcc3484-7192-41f6-a6c8-34c2d4c9f0df
+1652713999169	Marionette	INFO	Listening on port 56377
+1652713999517	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652714003642	Marionette	INFO	Stopped listening on port 56377
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NS_ERROR_FAILURE
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652714683840	geckodriver	INFO	Listening on 127.0.0.1:53474
+1652714686880	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53475" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile4GOib8"
+1652714687347	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofile4GOib8\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53475/devtools/browser/7cfd1a2b-8cab-4b02-b2c6-d925f174575f
+1652714689526	Marionette	INFO	Listening on port 53480
+1652714689585	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: NS_ERROR_FAILURE
+1652714849661	Marionette	INFO	Stopped listening on port 53480
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652714855104	geckodriver	INFO	Listening on 127.0.0.1:53581
+1652714858145	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53582" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileRfiqiT"
+1652714858547	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileRfiqiT\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53582/devtools/browser/e2cfe16f-ce3f-47d4-b334-ce90a4214c39
+1652714860482	Marionette	INFO	Listening on port 53589
+1652714860844	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: NS_ERROR_FAILURE
+1652715006705	Marionette	INFO	Stopped listening on port 53589
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 17832, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1652715253924	geckodriver	INFO	Listening on 127.0.0.1:58090
+1652715256983	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58091" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileIT9Yqv"
+1652715257406	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileIT9Yqv\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58091/devtools/browser/21e0dcf2-89dd-4a9b-9a8b-fa94512a24c7
+1652715259461	Marionette	INFO	Listening on port 58096
+1652715259685	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: NS_ERROR_FAILURE
+1652715352064	Marionette	INFO	Stopped listening on port 58091652715352489	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51187" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilezbMApD"
+1652715352969	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofilezbMApD\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51187/devtools/browser/797093ff-9ef6-411d-9fed-1b60dd1494e1
+1652715355153	Marionette	INFO	Listening on port 51193
+1652715355202	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652715359066	Marionette	INFO	Stopped listening on port 51193
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691: TypeError: this.tablesData[table] is undefined
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NS_ERROR_FAILURE
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652715484209	geckodriver	INFO	Listening on 127.0.0.1:51277
+1652715487247	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51278" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileh70UFa"
+1652715487702	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileh70UFa\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51278/devtools/browser/5ce11ea8-6307-45b0-8cef-5494a9ee7bef
+1652715489675	Marionette	INFO	Listening on port 51283
+1652715489937	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652715491644	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: , line 0: NS_ERROR_FAILURE
+1652715590479	Marionette	INFO	Stopped listening on port 51283
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "51354" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileHk4MtW"
+1652715553267	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileHk4MtW\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51354/devtools/browser/6f5ebcef-d81f-4c4b-8bbe-63f0fecf417e
+1652715555433	Marionette	INFO	Listening on port 51359
+1652715555645	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652715557690	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652715591383	Marionette	INFO	Stopped listening on port 51359
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NS_ERROR_FAILURE
+1652715765255	geckodriver	INFO	Listening on 127.0.0.1:65051
+1652715768298	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65052" "-no-remote" "-profile" "C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileKeH6cU"
+1652715768697	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\admin\\AppData\\Local\\Temp\\rust_mozprofileKeH6cU\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65052/devtools/browser/f58ae604-39f6-4293-8085-29b47b18140a
+1652715770676	Marionette	INFO	Listening on port 65057
+1652715771136	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652715774777	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652715797230	Marionette	INFO	Stopped listening on port 65057
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NS_ERROR_FAILURE
