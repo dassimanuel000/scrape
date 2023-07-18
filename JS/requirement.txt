@@ -1,0 +1,5 @@
+pymongo==4.1.1
+colorama==0.4.4
+selenium==4.1.0
+pandas==1.4.2
+paramiko==2.10.4
