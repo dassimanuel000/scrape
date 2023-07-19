@@ -4,6 +4,7 @@ import email
 from lib2to3.pgen2 import driver
 import linecache
 import random
+import subprocess
 
 from urllib.request import urlopen
 from urllib.error import URLError
@@ -74,7 +75,10 @@ from openai.error import RateLimitError
 from ast import literal_eval
 
 import os
+from datetime import datetime
+
 sys.setrecursionlimit(10000)
+nows = datetime.utcnow()
 
 
 import codecs
@@ -160,7 +164,10 @@ def fillByClass(driver, clss ,filler):
 def fillByXpath(driver, xpath, filler):
     print("waiting page loading")
     time.sleep(3)
-    driver.find_element(By.XPATH, xpath).send_keys(filler)
+    el = driver.find_element(By.XPATH, xpath)
+    for character in filler:
+        el.send_keys(character)
+        time.sleep(0.3) # pause for 0.3 seconds
     time.sleep(3)
     print("Continue the script")
 
@@ -232,7 +239,7 @@ def getinnertextXpath(driver, xPath):
         result = driver.find_element(By.XPATH, xPath)
         result = (result.get_attribute('innerText'))
     except NoSuchElementException:  #spelling error making this code not work as expected
-        result = "ZZZZZZZZZZZ"
+        result = " "
         pass
     return str(result)
 
@@ -308,6 +315,7 @@ def remove_tags(description):
 
 
 def initGoogle(driver):
+    driver.get("https://www.google.com/")
     cookieGoogle = driver.find_element(By.ID, 'L2AGLb').click()
     try:
         driver.find_element(By.CLASS_NAME, 'h-captcha')
@@ -353,7 +361,7 @@ def count_nombre_de_chiffre(str):
             pass
     return digit
 
-def valueifnull(returns, new):
+def valueifnull(returns, new): #valueifnull(line_value.get("FACEBOOK"), ' ')
     if returns is None:
         return new
     else:
@@ -556,7 +564,11 @@ def add_image_listivo(driver, image_link_value, id_post, profession):
 
 
 
-
+def waitloading(times, driverinstance):
+    times = int(times)
+    time.sleep(times)
+    wait = WebDriverWait(driverinstance, times)
+    wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
             
 #publish()
 def BIG8DONWLOAD():
@@ -581,33 +593,229 @@ def BIG8DONWLOAD():
         last_number = 0
     number = last_number + 1
     df = pd.read_excel(r'./data.xlsx')
+
+
+
+
+def scrap_site_saveAnnonceRegionJob(profession, ville,categories_path, lieu_tres_precis_path, date, etape_processus ):
+
+    if len (profession) > 2:
+        
+        option = FirefoxOptions()
+        option.add_argument('--disable-notifications')
+        option.add_argument("--mute-audio")
+        option.add_argument("user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1")
+        driverinstance = webdriver.Firefox(options=option)
+        initGoogle(driverinstance)
+        driverinstance.quit()
+
     
+    
+
+
+
+def scrap_site_saveAnnoncePE(profession, ville,categories_path, lieu_tres_precis_path, date, etape_processus ):
+
+
+    if len (profession) > 2:
+        
+        option = FirefoxOptions()
+        option.add_argument('--disable-notifications')
+        option.add_argument("--mute-audio")
+        option.add_argument("user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1")
+        driverinstance = webdriver.Firefox(options=option)
+        initGoogle(driverinstance)
+        #driverinstance.quit()
+
+    
+    
+def scrap_site_saveAnnonceAPEC(profession, ville,categories_path, lieu_tres_precis_path, date, etape_processus ):
+
+    if len(profession) > 2 and etape_processus <= 3:
+        
+        option = FirefoxOptions()
+        option.add_argument('--disable-notifications')
+        option.add_argument("--mute-audio")
+        option.add_argument("user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1")
+        driverinstance = webdriver.Firefox(options=option)
+
+        initGoogle(driverinstance)
+        
+        try:
+            driverinstance.get("https://www.apec.fr/candidat.html")
+            waitloading(2, driverinstance)
+            tryAndRetryClickXpath(driverinstance, '//div[contains(@id, "onetrust-button-group")]//button[contains(@id, "onetrust-accept-btn-handler")]')
+            tryAndRetryFillByXpath(driverinstance, '//div[contains(@class, "offer-search")]//input[contains(@id, "keywords")]', str(profession))
+            tryAndRetryFillByXpath(driverinstance, '//div[contains(@class, "offer-search")]//input[contains(@id, "keywords")]', Keys.TAB)
+            tryAndRetryFillByXpath(driverinstance, '//div[contains(@class, "offer-search")]//input[contains(@id, "locationOffres")]', str(ville))
+            tryAndRetryFillByXpath(driverinstance, '//div[contains(@class, "offer-search")]//input[contains(@id, "locationOffres")]', Keys.RETURN)
+            tryAndRetryFillByXpath(driverinstance, '//div[contains(@class, "offer-search")]//input[contains(@id, "locationOffres")]', Keys.RETURN)
+            waitloading(2, driverinstance)
+            
+            
+            my_list = list()
+            final_result = list()
+
+            links = driverinstance.find_elements(By.XPATH,"//*[contains(@class, 'container-result')]//div//a")
+                
+            if len(links) == 0:
+                print("Aucun lien trouvé.")
+            else:
+                for i in links:
+                    step1 = (i.get_attribute('href'))
+                    my_list.append(step1)
+                    
+                if len(my_list) > 7:
+                    my_list = my_list[:7]
+                
+                for j in my_list:
+                    driverinstance.get(j)
+                    waitloading(2, driverinstance)
+                    if ville == 'Télétravail':
+                        time.sleep(2)
+                        teleUrl = driverinstance.current_url
+                        teleUrl = teleUrl + "&typesTeletravail=20766&typesTeletravail=20765&typesTeletravail=20767"
+                        driverinstance.get(teleUrl)
+                        waitloading(2, driverinstance)
+                    date_offre = nows.strftime("%Y-%m-%dT%H:%M:%S.%f") + "Z"
+
+                    myDict = {}
+                    myDict["date"] = date_offre
+                    myDict["url"] = str(j)
+                    myDict["titre"]  = remove_tags(getinnertextXpath(driverinstance, "//nav//div//h1"))
+
+
+                    myDict["contrat"] = remove_tags(getinnertextXpath(driverinstance, "//div[contains(@class, 'card-offer__text')]//ul[contains(@class, 'details-offer-list')]//li[2]"))
+                    myDict["ville"] =  remove_tags(getinnertextXpath(driverinstance, "//div[contains(@class, 'card-offer__text')]//ul[contains(@class, 'details-offer-list')]//li[3]"))
+                    myDict["description"] =  remove_tags(getinnertextXpath(driverinstance, "//div[contains(@class, 'col-lg-8')]//div[contains(@class, 'details-post')]"))
+                    myDict["salary"] = remove_tags(getinnertextXpath(driverinstance, "//div[contains(@class, 'col-lg-4')]//div[contains(@class, 'details-post')][1]//span"))
+                    myDict["experience"] = remove_tags(getinnertextXpath(driverinstance, "//div[contains(@class, 'col-lg-4')]//div[contains(@class, 'details-post')][3]//span"))
+                    myDict["metier"] = remove_tags(getinnertextXpath(driverinstance, "//div[contains(@class, 'col-lg-4')]//div[contains(@class, 'details-post')][4]//span"))
+                    myDict["statut"] = remove_tags(getinnertextXpath(driverinstance, "//div[contains(@class, 'col-lg-4')]//div[contains(@class, 'details-post')][6]//span"))
+                    myDict["secteur"] = remove_tags(getinnertextXpath(driverinstance, "//div[contains(@class, 'col-lg-4')]//div[contains(@class, 'details-post')][5]//span"))
+                    myDict["cats"] = profession
+                    myDict["places"] = ville
+                    myDict["compagny"] = remove_tags(getinnertextXpath(driverinstance, "//div[contains(@class, 'card-offer__text')]//ul[contains(@class, 'details-offer-list')]//li[1]"))
+                    myDict["postTime"] = remove_tags(getinnertextXpath(driverinstance, "//div[contains(@class, 'mb-10')]//div//div[contains(@class, 'date-offre')][2]"))
+                    
+
+                    
+                    name_e = str(date)+".txt"
+                    append_new_line(r''+name_e+'', str(myDict))
+                    final_result.append(myDict)
+                
+                # Connexion au serveur MongoDB
+                client = pymongo.MongoClient("mongodb://192.168.1.174:27017")
+
+                # Vérification de l'existence de la base de données "TOUTE_OFFRE"
+                if "TOUTE_OFFRE" in client.list_database_names():
+                    # Connexion à la base de données "TOUTE_OFFRE"
+                    collection = client["TOUTE_OFFRE"]
+                else:
+                    # Création de la base de données "TOUTE_OFFRE"
+                    collection = client["TOUTE_OFFRE"]
+                    print("La base de données 'TOUTE_OFFRE' a été créée")
+
+                # Connexion à la base de données "n1"
+
+                collection = client[""+str(date)+""]
+                collection.insert_one(final_result)
+
+        except NoSuchElementException:
+            pass
+
+
+
+        dernier_etape_processus = date+".txt"
+        with open(dernier_etape_processus, 'w') as file:
+            file.write(str("4"))
+        #driverinstance.quit()
+
+
+
+
+def scrap_site_saveAnnonceHelloWork(profession, ville,categories_path, lieu_tres_precis_path, date, etape_processus ):
+
+    if len (profession) > 2:
+        
+        option = FirefoxOptions()
+        option.add_argument('--disable-notifications')
+        option.add_argument("--mute-audio")
+        option.add_argument("user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1")
+        driverinstance = webdriver.Firefox(options=option)
+        initGoogle(driverinstance)
+
+    
+    
+
+
+
+def scrap_site_FranceEmploi(profession, ville,categories_path, lieu_tres_precis_path, date, etape_processus ):
+
+    if len(profession) > 2:
+        
+        option = FirefoxOptions()
+        option.add_argument('--disable-notifications')
+        option.add_argument("--mute-audio")
+        option.add_argument("user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1")
+        driverinstance = webdriver.Firefox(options=option)
+        initGoogle(driverinstance)
+    
+    
+
+
+
+def scrap_site_TeepyJob(profession, ville,categories_path, lieu_tres_precis_path, date, etape_processus ):
+
+    if len (profession) > 2:
+        
+        option = FirefoxOptions()
+        option.add_argument('--disable-notifications')
+        option.add_argument("--mute-audio")
+        option.add_argument("user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1")
+        driverinstance = webdriver.Firefox(options=option)
+    
+    
+
+
     
 def publish():
 
-    input('9999999999999999999999')
-    list_search = list()
-    my_list = list()
-    my_list__ = list()
-    final_result = list()
-    option = FirefoxOptions()
-    option.add_argument('--disable-notifications')
-    option.add_argument("--mute-audio")
-    #option.add_argument("--headless")
-    #option.profile = "C:/Users/admin/AppData/Local/Mozilla/Firefox/Profiles/a2wm8g9y.default"
+    J = str(input("Entrez le jour voulu c'est-à-dire 09 ou 23 un jour en chiffre: "))
+    M = str(input("Entrez le mois voulu dans le format suivant de 01 à 12, par exemple pour janvier '01': "))
+    date = str('2022-'+M+'-'+J+'')
+    print('---------------------------------------2022-'+M+'-'+J+'-------------------------------------------------------------------------')
+    #subprocess.call(['curl', '-L', 'https://docs.google.com/spreadsheets/d/1a9wabH5oSOuzv6fQcR2wkETQu3M5OybyLDH7cPXxT_4/export?gid=0&format=xlsx', '-o', './Populations.xlsx'])
+    dernier_etape_processus = date+".txt"
+    try:
+        with open(dernier_etape_processus, 'r') as file:
+            etape_processus = str(file.read())
+    except FileNotFoundError:
+        etape_processus = 0
 
-    option.add_argument("user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1")
-    
-    driverinstance = webdriver.Firefox(options=option)
+    df = pd.read_excel('./Populations.xlsx')
+    colonne_date_post = df['Date de Post']
+    condition = colonne_date_post.astype(str).str.startswith('2022-' + M + '-' + J)
+    nouveau_dataframe = df[condition][['Département / GV', 'Profession 1', 'Profession 2', 'Profession 3', 'Catégories', 'Lieu Très Précis']]
+    print(nouveau_dataframe)
+
+    json_data = nouveau_dataframe.to_json(orient='records', force_ascii=False)
+            
+    json_data = json.loads(json_data)
+    for item in json_data:
+        scrap_site_saveAnnonceAPEC(item['Profession 1'], item['Département / GV'], item['Catégories'], item['Lieu Très Précis'], date , int(etape_processus))
+
+    """"""
 
     
-    
-while True:
+publish()
+
+""""while True:
     try:
         publish()
         break
     except Exception as e:
         print("Une erreur s'est produite :", str(e))
         print("Redémarrage du script dans 5 secondes...")
-        time.sleep(360)
+        time.sleep(360)"""
  
