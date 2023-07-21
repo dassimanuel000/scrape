@@ -162,14 +162,12 @@ def fillByClass(driver, clss ,filler):
     print("Continue the script")
 
 def fillByXpath(driver, xpath, filler):
-    print("waiting page loading")
     time.sleep(3)
     el = driver.find_element(By.XPATH, xpath)
     for character in filler:
         el.send_keys(character)
         time.sleep(0.3) # pause for 0.3 seconds
     time.sleep(3)
-    print("Continue the script")
 
 def tryAndRetryClickXpath(driver, xPath):
     try : 
@@ -241,6 +239,15 @@ def getinnertextXpath(driver, xPath):
     except NoSuchElementException:  #spelling error making this code not work as expected
         result = " "
         pass
+    if result == " ":
+        time.sleep(2)
+        try:
+            result = ""
+            result = driver.find_element(By.XPATH, xPath)
+            result = (result.get_attribute('innerText'))
+        except NoSuchElementException:  #spelling error making this code not work as expected
+            result = " "
+            pass
     return str(result)
 
 
@@ -287,8 +294,8 @@ def clear_element(driver, xpath):
 
 def recaptcha(driver, Xpath):
     try:
-        time.sleep(5)
-        tryAndRetryClickXpath(driver, Xpath)
+        time.sleep(3)
+        waitBeforeClickOnXpath(driver, Xpath)
         time.sleep(2)
     except NoSuchElementException:
         time.sleep(5)
@@ -597,19 +604,109 @@ def BIG8DONWLOAD():
 
 
 
-def scrap_site_saveAnnonceRegionJob(profession, ville,categories_path, lieu_tres_precis_path, date, etape_processus ):
+def scrap_site_saveAnnonceIndeed(profession, ville,categories_path, lieu_tres_precis_path, date, etape_processus ):
 
-    if len (profession) > 2:
+    if len(profession) > 2 and etape_processus <= 1:
         
         option = FirefoxOptions()
         option.add_argument('--disable-notifications')
         option.add_argument("--mute-audio")
         option.add_argument("user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1")
         driverinstance = webdriver.Firefox(options=option)
-        initGoogle(driverinstance)
-        driverinstance.quit()
 
-    
+        initGoogle(driverinstance)
+        
+        try:
+            urlParent = 'https://fr.indeed.com/jobs?q='+profession+'&l='+ville
+            urlParent = urlParent + "&fromage=3&limit=25&sort=date&filter=0"
+            
+            driverinstance.get(urlParent)
+            waitloading(2, driverinstance)
+            tryAndRetryClickXpath(driverinstance, '//button[contains(@id, "onetrust-reject-all-handler")]')
+            
+            waitloading(2, driverinstance)
+            
+            my_list = list()
+            final_result = list()
+
+            links = driverinstance.find_elements(By.XPATH,"//body//a[contains(@class, 'jcs-JobTitle')]")
+                
+            if len(links) == 0:
+                print("Aucun lien trouvé.")
+            else:
+                for i in links:
+                    step1 = (i.get_attribute('href'))
+                    my_list.append(step1)
+                    
+                if len(my_list) > 10:
+                    my_list = my_list[:10]
+                print("----------------------------------"+str(len(my_list))+"-----------------------------------------")
+                for j in my_list:
+                    driverinstance.get(j)
+                    waitloading(2, driverinstance)
+                    date_offre = nows.strftime("%Y-%m-%dT%H:%M:%S.%f") + "Z"
+
+                    myDict = {}
+                    myDict["date"] = date_offre
+                    myDict["url"] = str(j)
+                    myDict["titre"]  = remove_tags(getinnertextXpath(driverinstance, "//h1[contains(@class, 'jobsearch-JobInfoHeader-title')]"))
+
+
+                    myDict["contrat"] = remove_tags(getinnertextXpath(driverinstance, "//div[contains(text(), 'Type de poste')]/following-sibling::div"))
+
+
+
+                    myDict["ville"] =  remove_tags(getinnertextXpath(driverinstance, "//div[contains(@data-testid, 'jobsearch-CompanyInfoContainer')]//div[contains(@data-testid, 'inlineHeader-companyLocation')]"))
+                    myDict["description"] = remove_tags(getinnertextXpath(driverinstance, "//div[contains(@id, 'jobDescriptionText')]")).encode('unicode-escape').decode('utf-8')
+                    myDict["salary"] = remove_tags(getinnertextXpath(driverinstance, "//div[contains(text(), 'Salaire')]/following-sibling::div"))
+                    myDict["experience"] = ""
+                    myDict["metier"] = ""
+                    myDict["statut"] = ""
+                    myDict["secteur"] = ""
+                    myDict["cats"] = lieu_tres_precis_path
+                    myDict["places"] = categories_path
+                    myDict["compagny"] = remove_tags(getinnertextXpath(driverinstance, "//div[contains(@data-testid, 'inlineHeader-companyName')]"))
+                    myDict["postTime"] = ""
+
+
+                    
+                    name_e = str(date)+"-data.txt"
+                    append_new_line(r''+name_e+'', str(myDict).encode('unicode-escape').decode('utf-8'))
+                    final_result.append(myDict)
+                                
+                if len(final_result) > 0:
+                    final_result = json.dumps(final_result)
+                    final_result = (json.loads(final_result))
+
+
+                    # Connexion au serveur MongoDB
+                    client = pymongo.MongoClient("mongodb://192.168.1.174:27017")
+
+                    # Vérification de l'existence de la base de données "TOUTE_OFFRE"
+                    if "TOUTE_OFFRE" in client.list_database_names():
+                        # Connexion à la base de données "TOUTE_OFFRE"
+                        db = client["TOUTE_OFFRE"]
+                    else:
+                        # Création de la base de données "TOUTE_OFFRE"
+                        db = client["TOUTE_OFFRE"]
+                        print("La base de données 'TOUTE_OFFRE' a été créée")
+
+                    # Connexion à la collection "2022-05-15" dans la base de données
+                    collection = db[date]
+                    collection.insert_many(final_result)
+                else:
+                    pass
+            driverinstance.quit()
+
+        except NoSuchElementException:
+            pass
+
+
+
+        dernier_etape_processus = date+".txt"
+        with open(dernier_etape_processus, 'w') as file:
+            file.write(str("2"))
+
     
 
 
@@ -617,15 +714,118 @@ def scrap_site_saveAnnonceRegionJob(profession, ville,categories_path, lieu_tres
 def scrap_site_saveAnnoncePE(profession, ville,categories_path, lieu_tres_precis_path, date, etape_processus ):
 
 
-    if len (profession) > 2:
+    if len(profession) > 2 and etape_processus <= 2:
         
         option = FirefoxOptions()
         option.add_argument('--disable-notifications')
         option.add_argument("--mute-audio")
         option.add_argument("user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1")
         driverinstance = webdriver.Firefox(options=option)
+
         initGoogle(driverinstance)
-        #driverinstance.quit()
+        
+        try:
+            driverinstance.get("https://candidat.pole-emploi.fr/offres/emploi")
+            waitloading(2, driverinstance)
+            tryAndRetryClickXpath(driverinstance, '//button[contains(@id, "footer_tc_privacy_button_2")]')
+            
+            waitloading(2, driverinstance)
+            if ville == 'Télétravail':
+                tryAndRetryFillByXpath(driverinstance, '//input[contains(@id, "idmotsCles-selectized")]', str(profession))
+                tryAndRetryFillByXpath(driverinstance, '//input[contains(@id, "idmotsCles-selectized")]', Keys.RETURN)
+                tryAndRetryFillByXpath(driverinstance, '//input[contains(@id, "idmotsCles-selectized")]', str(ville))
+                tryAndRetryFillByXpath(driverinstance, '//input[contains(@id, "idmotsCles-selectized")]', Keys.RETURN)
+            else:
+                tryAndRetryFillByXpath(driverinstance, '//input[contains(@id, "idmotsCles-selectized")]', str(profession))
+                tryAndRetryFillByXpath(driverinstance, '//input[contains(@id, "idmotsCles-selectized")]', Keys.RETURN)
+                tryAndRetryFillByXpath(driverinstance, '//input[contains(@id, "idlieux-selectized")]', str(ville.split(' - ')[0]))
+                tryAndRetryFillByXpath(driverinstance, '//input[contains(@id, "idlieux-selectized")]', Keys.RETURN)
+
+            tryAndRetryClickXpath(driverinstance, '//a[contains(@id, "btnSubmitRechercheForm")]')
+            waitloading(2, driverinstance)
+            
+            
+            my_list = list()
+            final_result = list()
+            for i in range(2):
+                recaptcha(driverinstance, '//*[contains(@class, "results-more")]//a')
+                waitloading(1, driverinstance)
+
+            links = driverinstance.find_elements(By.XPATH,"//ul[contains(@class, 'result-list')]//a[contains(@class, 'media with-fav')]")
+                
+            if len(links) == 0:
+                print("Aucun lien trouvé.")
+            else:
+                for i in links:
+                    step1 = (i.get_attribute('href'))
+                    my_list.append(step1)
+                    
+                if len(my_list) > 7:
+                    my_list = my_list[:7]
+                print("----------------------------------"+str(len(my_list))+"-----------------------------------------")
+                for j in my_list:
+                    driverinstance.get(j)
+                    waitloading(2, driverinstance)
+                    date_offre = nows.strftime("%Y-%m-%dT%H:%M:%S.%f") + "Z"
+
+                    myDict = {}
+                    myDict["date"] = date_offre
+                    myDict["url"] = str(j)
+                    myDict["titre"]  = remove_tags(getinnertextXpath(driverinstance, "//h1"))
+                    myDict["titre"]  = re.sub(r"^Offre n° \d+\n", "", myDict["titre"])
+
+                    myDict["contrat"] = remove_tags(getinnertextXpath(driverinstance, "//div[contains(@class, 'description-aside') and contains(@class, 'col-sm-4') and contains(@class, 'col-md-5')]/dl/dd[5]"))
+                    myDict["ville"] =  remove_tags(getinnertextXpath(driverinstance, "//p[contains(@class, 't4') and contains(@class, 'title-complementary')]/span[1]"))
+                    myDict["description"] = remove_tags(getinnertextXpath(driverinstance, "//div/div/div/div/div/div/div/div/div/div/div[contains(@class, 'description')]/p")).encode('unicode-escape').decode('utf-8')
+                    myDict["salary"] = remove_tags(getinnertextXpath(driverinstance, "//div[contains(@class, 'description-aside') and contains(@class, 'col-sm-4') and contains(@class, 'col-md-5')]/dl/dd[7]/ul/li"))
+                    myDict["experience"] = remove_tags(getinnertextXpath(driverinstance, "//li/span/span[contains(@class, 'skill-name')]"))
+                    myDict["metier"] = ""
+                    myDict["statut"] = ""
+                    myDict["secteur"] = ""
+                    myDict["cats"] = lieu_tres_precis_path
+                    myDict["places"] = categories_path
+                    myDict["compagny"] = ""
+                    myDict["postTime"] = remove_tags(getinnertextXpath(driverinstance, "//p[contains(@class, 't5') and contains(@class, 'title-complementary')]/span[1]"))
+                    myDict["postTime"] = ''.join(c for c in myDict["postTime"] if not c.isalpha())
+
+
+                    
+                    name_e = str(date)+"-data.txt"
+                    append_new_line(r''+name_e+'', str(myDict).encode('unicode-escape').decode('utf-8'))
+                    final_result.append(myDict)
+                                
+                if len(final_result) > 0:
+                    final_result = json.dumps(final_result)
+                    final_result = (json.loads(final_result))
+
+
+                    # Connexion au serveur MongoDB
+                    client = pymongo.MongoClient("mongodb://192.168.1.174:27017")
+
+                    # Vérification de l'existence de la base de données "TOUTE_OFFRE"
+                    if "TOUTE_OFFRE" in client.list_database_names():
+                        # Connexion à la base de données "TOUTE_OFFRE"
+                        db = client["TOUTE_OFFRE"]
+                    else:
+                        # Création de la base de données "TOUTE_OFFRE"
+                        db = client["TOUTE_OFFRE"]
+                        print("La base de données 'TOUTE_OFFRE' a été créée")
+
+                    # Connexion à la collection "2022-05-15" dans la base de données
+                    collection = db[date]
+                    collection.insert_many(final_result)
+                else:
+                    pass
+            driverinstance.quit()
+
+        except NoSuchElementException:
+            pass
+
+
+
+        dernier_etape_processus = date+".txt"
+        with open(dernier_etape_processus, 'w') as file:
+            file.write(str("3"))
 
     
     
@@ -651,6 +851,11 @@ def scrap_site_saveAnnonceAPEC(profession, ville,categories_path, lieu_tres_prec
             tryAndRetryFillByXpath(driverinstance, '//div[contains(@class, "offer-search")]//input[contains(@id, "locationOffres")]', Keys.RETURN)
             tryAndRetryFillByXpath(driverinstance, '//div[contains(@class, "offer-search")]//input[contains(@id, "locationOffres")]', Keys.RETURN)
             waitloading(2, driverinstance)
+            if ville == 'Télétravail':
+                teleUrl = driverinstance.current_url
+                teleUrl = teleUrl + "&typesTeletravail=20766&typesTeletravail=20765&typesTeletravail=20767"
+                driverinstance.get(teleUrl)
+                waitloading(3, driverinstance)
             
             
             my_list = list()
@@ -667,16 +872,10 @@ def scrap_site_saveAnnonceAPEC(profession, ville,categories_path, lieu_tres_prec
                     
                 if len(my_list) > 7:
                     my_list = my_list[:7]
-                
+                print("----------------------------------"+str(len(my_list))+"-----------------------------------------")
                 for j in my_list:
                     driverinstance.get(j)
                     waitloading(2, driverinstance)
-                    if ville == 'Télétravail':
-                        time.sleep(2)
-                        teleUrl = driverinstance.current_url
-                        teleUrl = teleUrl + "&typesTeletravail=20766&typesTeletravail=20765&typesTeletravail=20767"
-                        driverinstance.get(teleUrl)
-                        waitloading(2, driverinstance)
                     date_offre = nows.strftime("%Y-%m-%dT%H:%M:%S.%f") + "Z"
 
                     myDict = {}
@@ -687,39 +886,47 @@ def scrap_site_saveAnnonceAPEC(profession, ville,categories_path, lieu_tres_prec
 
                     myDict["contrat"] = remove_tags(getinnertextXpath(driverinstance, "//div[contains(@class, 'card-offer__text')]//ul[contains(@class, 'details-offer-list')]//li[2]"))
                     myDict["ville"] =  remove_tags(getinnertextXpath(driverinstance, "//div[contains(@class, 'card-offer__text')]//ul[contains(@class, 'details-offer-list')]//li[3]"))
-                    myDict["description"] =  remove_tags(getinnertextXpath(driverinstance, "//div[contains(@class, 'col-lg-8')]//div[contains(@class, 'details-post')]"))
+                    myDict["description"] = remove_tags(getinnertextXpath(driverinstance, "//apec-poste-informations//div[contains(@class, 'col-lg-8')]//div[contains(@class, 'details-post')]")).encode('unicode-escape').decode('utf-8')
                     myDict["salary"] = remove_tags(getinnertextXpath(driverinstance, "//div[contains(@class, 'col-lg-4')]//div[contains(@class, 'details-post')][1]//span"))
                     myDict["experience"] = remove_tags(getinnertextXpath(driverinstance, "//div[contains(@class, 'col-lg-4')]//div[contains(@class, 'details-post')][3]//span"))
                     myDict["metier"] = remove_tags(getinnertextXpath(driverinstance, "//div[contains(@class, 'col-lg-4')]//div[contains(@class, 'details-post')][4]//span"))
                     myDict["statut"] = remove_tags(getinnertextXpath(driverinstance, "//div[contains(@class, 'col-lg-4')]//div[contains(@class, 'details-post')][6]//span"))
                     myDict["secteur"] = remove_tags(getinnertextXpath(driverinstance, "//div[contains(@class, 'col-lg-4')]//div[contains(@class, 'details-post')][5]//span"))
-                    myDict["cats"] = profession
-                    myDict["places"] = ville
+                    myDict["cats"] = lieu_tres_precis_path
+                    myDict["places"] = categories_path
                     myDict["compagny"] = remove_tags(getinnertextXpath(driverinstance, "//div[contains(@class, 'card-offer__text')]//ul[contains(@class, 'details-offer-list')]//li[1]"))
                     myDict["postTime"] = remove_tags(getinnertextXpath(driverinstance, "//div[contains(@class, 'mb-10')]//div//div[contains(@class, 'date-offre')][2]"))
-                    
+                    myDict["postTime"] = ''.join(c for c in myDict["postTime"] if not c.isalpha())
+
 
                     
-                    name_e = str(date)+".txt"
-                    append_new_line(r''+name_e+'', str(myDict))
+                    name_e = str(date)+"-data.txt"
+                    append_new_line(r''+name_e+'', str(myDict).encode('unicode-escape').decode('utf-8'))
                     final_result.append(myDict)
-                
-                # Connexion au serveur MongoDB
-                client = pymongo.MongoClient("mongodb://192.168.1.174:27017")
+                                
+                if len(final_result) > 0:
+                    final_result = json.dumps(final_result)
+                    final_result = (json.loads(final_result))
 
-                # Vérification de l'existence de la base de données "TOUTE_OFFRE"
-                if "TOUTE_OFFRE" in client.list_database_names():
-                    # Connexion à la base de données "TOUTE_OFFRE"
-                    collection = client["TOUTE_OFFRE"]
+
+                    # Connexion au serveur MongoDB
+                    client = pymongo.MongoClient("mongodb://192.168.1.174:27017")
+
+                    # Vérification de l'existence de la base de données "TOUTE_OFFRE"
+                    if "TOUTE_OFFRE" in client.list_database_names():
+                        # Connexion à la base de données "TOUTE_OFFRE"
+                        db = client["TOUTE_OFFRE"]
+                    else:
+                        # Création de la base de données "TOUTE_OFFRE"
+                        db = client["TOUTE_OFFRE"]
+                        print("La base de données 'TOUTE_OFFRE' a été créée")
+
+                    # Connexion à la collection "2022-05-15" dans la base de données
+                    collection = db[date]
+                    collection.insert_many(final_result)
                 else:
-                    # Création de la base de données "TOUTE_OFFRE"
-                    collection = client["TOUTE_OFFRE"]
-                    print("La base de données 'TOUTE_OFFRE' a été créée")
-
-                # Connexion à la base de données "n1"
-
-                collection = client[""+str(date)+""]
-                collection.insert_one(final_result)
+                    pass
+            driverinstance.quit()
 
         except NoSuchElementException:
             pass
@@ -729,21 +936,124 @@ def scrap_site_saveAnnonceAPEC(profession, ville,categories_path, lieu_tres_prec
         dernier_etape_processus = date+".txt"
         with open(dernier_etape_processus, 'w') as file:
             file.write(str("4"))
-        #driverinstance.quit()
 
 
 
 
 def scrap_site_saveAnnonceHelloWork(profession, ville,categories_path, lieu_tres_precis_path, date, etape_processus ):
 
-    if len (profession) > 2:
+    if len(profession) > 2 and etape_processus <= 4:
         
         option = FirefoxOptions()
         option.add_argument('--disable-notifications')
         option.add_argument("--mute-audio")
         option.add_argument("user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1")
         driverinstance = webdriver.Firefox(options=option)
+
         initGoogle(driverinstance)
+        
+        try:
+            driverinstance.get("https://www.hellowork.com/fr-fr")
+            waitloading(2, driverinstance)
+            tryAndRetryClickXpath(driverinstance, '//div[contains(@class, "hw-cc-btn-group")]//button[contains(@id, "hw-cc-notice-accept-btn")]')
+            waitloading(1, driverinstance)
+            tryAndRetryFillByXpath(driverinstance, '//div[contains(@class, "")]//input[contains(@name, "k")]', str(profession))
+            tryAndRetryFillByXpath(driverinstance, '//div[contains(@class, "")]//input[contains(@name, "k")]', Keys.TAB)
+            tryAndRetryFillByXpath(driverinstance, '//div[contains(@class, "")]//input[contains(@name, "k")]', Keys.TAB)
+            if ville == 'Télétravail':
+                tryAndRetryFillByXpath(driverinstance, '//div[contains(@class, "")]//input[@name="k"]', Keys.ENTER)
+                waitloading(2, driverinstance)
+                teleUrl = driverinstance.current_url
+                teleUrl = teleUrl + "&t=Complet&t=Partiel&t=Occasionnel&c=CDI&c=CDD"
+                driverinstance.get(teleUrl)
+                waitloading(3, driverinstance)
+            else:
+                tryAndRetryFillByXpath(driverinstance, '//div[contains(@class, "")]//input[@name="l"]', str(ville))
+                tryAndRetryFillByXpath(driverinstance, '//div[contains(@class, "")]//input[@name="l"]', Keys.ARROW_DOWN)
+                tryAndRetryFillByXpath(driverinstance, '//div[contains(@class, "")]//input[@name="l"]', Keys.RETURN)
+                waitloading(2, driverinstance)
+            
+            
+            my_list = list()
+            final_result = list()
+
+            links = driverinstance.find_elements(By.XPATH,"//section//ul[contains(@data-teleport-target, 'destination')]//li//span//h3//a")
+                
+            if len(links) == 0:
+                print("Aucun lien trouvé.")
+            else:
+                for i in links:
+                    step1 = (i.get_attribute('href'))
+                    my_list.append(step1)
+                    
+                if len(my_list) > 7:
+                    my_list = my_list[:7]
+                print("----------------------------------"+str(len(my_list))+"-----------------------------------------")
+                for j in my_list:
+                    driverinstance.get(j)
+                    waitloading(2, driverinstance)
+                    date_offre = nows.strftime("%Y-%m-%dT%H:%M:%S.%f") + "Z"
+
+                    myDict = {}
+                    myDict["date"] = date_offre
+                    myDict["url"] = str(j)
+                    myDict["titre"]  = remove_tags(getinnertextXpath(driverinstance, "//h1//span"))
+
+
+                    myDict["contrat"] = remove_tags(getinnertextXpath(driverinstance, "//h1/following-sibling::ul//li[2]//span"))
+                    myDict["ville"] =  remove_tags(getinnertextXpath(driverinstance, "//h1/following-sibling::ul//li[1]//span"))
+                    myDict["description"] = remove_tags(getinnertextXpath(driverinstance,"//section[contains(@class, 'content modal')]")).encode('unicode-escape').decode('utf-8')
+                    myDict["salary"] = remove_tags(getinnertextXpath(driverinstance, "//h1/following-sibling::ul//li[3]//span"))
+                    myDict["experience"] = remove_tags(getinnertextXpath(driverinstance, "//section[contains(@class, 'shrink retrait modal')]//ul[2]//li[3]"))
+                    myDict["metier"] = remove_tags(getinnertextXpath(driverinstance, "//section[contains(@class, 'shrink retrait modal')]//ul[2]//li[1]"))
+                    myDict["statut"] = ""
+                    myDict["secteur"] = remove_tags(getinnertextXpath(driverinstance, "//section[contains(@data-company-badge, '')]//ul//li[2]"))
+                    myDict["cats"] = lieu_tres_precis_path
+                    myDict["places"] = categories_path
+                    myDict["compagny"] = remove_tags(getinnertextXpath(driverinstance, "//section[contains(@class, 'content modal')]//h2[1]")).replace("recherche", "").replace("...", "")
+                    myDict["postTime"] = remove_tags(getinnertextXpath(driverinstance, "//section[contains(@class, 'shrink retrait modal')]//span[contains(@class, 'retrait')]//span"))
+                    myDict["postTime"] = ''.join(c for c in myDict["postTime"] if not c.isalpha())
+
+
+                    
+                    name_e = str(date)+"-data.txt"
+                    append_new_line(r''+name_e+'', str(myDict).encode('unicode-escape').decode('utf-8'))
+                    final_result.append(myDict)
+                                
+                if len(final_result) > 0:
+                    final_result = json.dumps(final_result)
+                    final_result = (json.loads(final_result))
+
+
+                    # Connexion au serveur MongoDB
+                    client = pymongo.MongoClient("mongodb://192.168.1.174:27017")
+
+                    # Vérification de l'existence de la base de données "TOUTE_OFFRE"
+                    if "TOUTE_OFFRE" in client.list_database_names():
+                        # Connexion à la base de données "TOUTE_OFFRE"
+                        db = client["TOUTE_OFFRE"]
+                    else:
+                        # Création de la base de données "TOUTE_OFFRE"
+                        db = client["TOUTE_OFFRE"]
+                        print("La base de données 'TOUTE_OFFRE' a été créée")
+
+                    # Connexion à la collection "2022-05-15" dans la base de données
+                    collection = db[date]
+                    collection.insert_many(final_result)
+                else:
+                    pass
+            driverinstance.quit()
+
+        except NoSuchElementException:
+            pass
+
+
+
+        dernier_etape_processus = date+".txt"
+        with open(dernier_etape_processus, 'w') as file:
+            file.write(str("5"))
+
+
 
     
     
@@ -765,22 +1075,313 @@ def scrap_site_FranceEmploi(profession, ville,categories_path, lieu_tres_precis_
 
 
 
-def scrap_site_TeepyJob(profession, ville,categories_path, lieu_tres_precis_path, date, etape_processus ):
 
-    if len (profession) > 2:
+def scrap_site_LINKEDIN(profession, ville,categories_path, lieu_tres_precis_path, date, etape_processus ):
+
+    if len(profession) > 2 and etape_processus <= 6:
         
         option = FirefoxOptions()
         option.add_argument('--disable-notifications')
         option.add_argument("--mute-audio")
         option.add_argument("user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1")
         driverinstance = webdriver.Firefox(options=option)
-    
-    
+
+        initGoogle(driverinstance)
+        
+        try:
+            driverinstance.get("https://fr.linkedin.com/jobs/search")
+            waitloading(2, driverinstance)
+            tryAndRetryClickXpath(driverinstance, "//button[contains(@data-control-name,'ga-cookie.consent.accept.v4')]")
+            waitloading(1, driverinstance)
+            
+            tryAndRetryFillByXpath(driverinstance, '//input[contains(@aria-controls, "job-search-bar-keywords-typeahead-list")]', str(profession)+ " ")
+            tryAndRetryFillByXpath(driverinstance, '//input[contains(@aria-controls, "job-search-bar-location-typeahead-list")]', str(ville) + " ")
+            
+            tryAndRetryFillByXpath(driverinstance, '//input[contains(@aria-controls, "job-search-bar-location-typeahead-list")]', Keys.ENTER)
+            time.sleep(3)
+            waitloading(3, driverinstance)
+            
+            my_list = list()
+            final_result = list()
+     
+            links = driverinstance.find_elements(By.XPATH, '//a[contains(@data-tracking-control-name, "public_jobs_jserp-result_search-card")]')
+            count = (len(links))
+            if count < 4:
+                time.sleep(2)
+                links = driverinstance.find_elements(By.XPATH,'//a[contains(@data-tracking-control-name, "public_jobs_jserp-result_search-card")]')
+                count = (len(links))
+                print(count)
+            else:
+                print(count)
 
 
-    
-def publish():
+            if len(links) == 0:
+                print("Aucun lien trouvé.")
+            else:
+                for i in links:
+                    step1 = (i.get_attribute('href'))
+                    my_list.append(step1)
+                    
+                if len(my_list) > 5:
+                    my_list = my_list[:5]
+                print("----------------------------------"+str(len(my_list))+"-----------------------------------------")
+                for j in my_list:
+                    driverinstance.get(j)
+                    waitloading(1, driverinstance)
+                    date_offre = nows.strftime("%Y-%m-%dT%H:%M:%S.%f") + "Z"
 
+                    myDict = {}
+                    myDict["date"] = date_offre
+                    myDict["url"] = str(j)
+                    myDict["titre"]  = remove_tags(getinnertextXpath(driverinstance, '//div[contains(@class, "top-card-layout__entity-info")]//h1'))
+
+
+                    myDict["contrat"] = remove_tags(getinnertextXpath(driverinstance, '//span[contains(@class, "description__job-criteria-text--criteria")][2]'))
+                    myDict["ville"] =  remove_tags(getinnertextXpath(driverinstance, '//div[contains(@class, "topcard__flavor-row")][1]//span[contains(@class, "topcard__flavor--bullet")]'))
+                    myDict["salary"] = ""
+                    myDict["experience"] = remove_tags(getinnertextXpath(driverinstance, '//span[contains(@class, "description__job-criteria-text--criteria")][1]'))
+                    myDict["metier"] = remove_tags(getinnertextXpath(driverinstance, '//span[contains(@class, "description__job-criteria-text--criteria")][3]'))
+                    myDict["statut"] = ""
+                    myDict["secteur"] = remove_tags(getinnertextXpath(driverinstance, '//span[contains(@class, "description__job-criteria-text--criteria")][4]'))
+                    myDict["cats"] = lieu_tres_precis_path
+                    myDict["places"] = categories_path
+                    myDict["compagny"] = ""
+                    myDict["postTime"] = ""
+ 
+                    myDict["description"] = remove_tags(getinnertextXpath(driverinstance, '//section[contains(@class, "show-more-less-html")]//div[contains(@class, "show-more-less-html__markup")]')).encode('unicode-escape').decode('utf-8')
+                    
+
+                    
+                    name_e = str(date)+"-data.txt"
+                    append_new_line(r''+name_e+'', str(myDict).encode('unicode-escape').decode('utf-8'))
+                    final_result.append(myDict)
+                                
+                if len(final_result) > 0:
+                    final_result = json.dumps(final_result)
+                    final_result = (json.loads(final_result))
+
+
+                    # Connexion au serveur MongoDB
+                    client = pymongo.MongoClient("mongodb://192.168.1.174:27017")
+
+                    # Vérification de l'existence de la base de données "TOUTE_OFFRE"
+                    if "TOUTE_OFFRE" in client.list_database_names():
+                        # Connexion à la base de données "TOUTE_OFFRE"
+                        db = client["TOUTE_OFFRE"]
+                    else:
+                        # Création de la base de données "TOUTE_OFFRE"
+                        db = client["TOUTE_OFFRE"]
+                        print("La base de données 'TOUTE_OFFRE' a été créée")
+
+                    # Connexion à la collection "2022-05-15" dans la base de données
+                    collection = db[date]
+                    collection.insert_many(final_result)
+                else:
+                    pass
+
+        except NoSuchElementException:
+            pass
+        
+        driverinstance.quit()
+
+
+
+        dernier_etape_processus = date+".txt"
+        with open(dernier_etape_processus, 'w') as file:
+            file.write(str("7"))
+    
+
+def scrap_site_JobUp(profession, ville,categories_path, lieu_tres_precis_path, date, etape_processus ):
+
+    
+    if len(profession) > 2 and etape_processus <= 7:
+        
+        option = FirefoxOptions()
+        option.add_argument('--disable-notifications')
+        option.add_argument("--mute-audio")
+        option.add_argument("user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1")
+        driverinstance = webdriver.Firefox(options=option)
+
+        initGoogle(driverinstance)
+        
+        try:
+            driverinstance.get("https://www.jobup.ch/")
+            waitloading(1, driverinstance)
+            driverinstance.get("https://www.jobup.ch/fr/emplois/")
+            waitloading(2, driverinstance)
+            tryAndRetryClickXpath(driverinstance, '//div[contains(@id, "modal")]//div//div//div//div//button[contains(@type, "button")]//span')
+            waitloading(1, driverinstance)
+            if ville == 'Télétravail':
+                teleUrl = driverinstance.current_url
+                teleUrl = teleUrl + "?benefit=1&term="
+                driverinstance.get(teleUrl)
+                waitloading(3, driverinstance)
+            elif ville == 'Genève' and profession == 'Assistant administratif':
+                teleUrl = driverinstance.current_url
+                teleUrl = teleUrl + "?employment-type=5&employment-type=1&location=Genève&publication-date=1"
+                driverinstance.get(teleUrl)
+                waitloading(3, driverinstance)
+            else:
+                tryAndRetryFillByXpath(driverinstance, '//input[contains(@id, "synonym-typeahead-text-field")]', str(profession))
+                tryAndRetryFillByXpath(driverinstance, '//input[contains(@id, "synonym-typeahead-text-field")]', Keys.ARROW_DOWN)
+                tryAndRetryFillByXpath(driverinstance, '//input[contains(@id, "synonym-typeahead-text-field")]', Keys.RETURN)
+                tryAndRetryFillByXpath(driverinstance, '//input[contains(@id, "location-typeahead-text-field")]', str(ville))
+                tryAndRetryFillByXpath(driverinstance, '//input[contains(@id, "location-typeahead-text-field")]', Keys.ARROW_DOWN)
+                tryAndRetryFillByXpath(driverinstance, '//input[contains(@id, "location-typeahead-text-field")]', Keys.RETURN)
+                tryAndRetryFillByXpath(driverinstance, '//input[contains(@id, "location-typeahead-text-field")]', Keys.RETURN)
+                waitloading(3, driverinstance)
+            
+            my_list = list()
+            final_result = list()
+
+            links = driverinstance.find_elements(By.XPATH,"//*[contains(@id, 'skip-link-target')]//div//main//aside//div//div//div//div//div//article//a")
+                
+            if len(links) == 0:
+                print("Aucun lien trouvé.")
+            else:
+                for i in links:
+                    step1 = (i.get_attribute('href'))
+                    my_list.append(step1)
+                    
+                if len(my_list) > 5:
+                    my_list = my_list[:5]
+                print("----------------------------------"+str(len(my_list))+"-----------------------------------------")
+                for j in my_list:
+                    driverinstance.get(j)
+                    waitloading(2, driverinstance)
+                    date_offre = nows.strftime("%Y-%m-%dT%H:%M:%S.%f") + "Z"
+
+                    myDict = {}
+                    myDict["date"] = date_offre
+                    myDict["url"] = str(j)
+                    myDict["titre"]  = remove_tags(getinnertextXpath(driverinstance, "//body//h1"))
+
+
+                    myDict["contrat"] = remove_tags(getinnertextXpath(driverinstance, "//*[contains(@data-cy, 'info-contract')]//div//span"))
+                    myDict["ville"] =  remove_tags(getinnertextXpath(driverinstance, "//a[contains(@data-cy, 'info-location-link')]"))
+                    
+                    myDict["salary"] = ""
+                    myDict["experience"] = ""
+                    myDict["metier"] = ""
+                    myDict["statut"] = ""
+                    myDict["secteur"] = ""
+                    myDict["cats"] = lieu_tres_precis_path
+                    myDict["places"] = categories_path
+                    myDict["compagny"] = ""
+                    myDict["postTime"] = ""
+
+                    driverinstance.switch_to.frame(driverinstance.find_element(By.XPATH, "//iframe"))
+                    myDict["description"] = remove_tags(getinnertextXpath(driverinstance, "//body")).encode('unicode-escape').decode('utf-8')
+                    
+
+                    
+                    name_e = str(date)+"-data.txt"
+                    append_new_line(r''+name_e+'', str(myDict).encode('unicode-escape').decode('utf-8'))
+                    final_result.append(myDict)
+                                
+                if len(final_result) > 0:
+                    final_result = json.dumps(final_result)
+                    final_result = (json.loads(final_result))
+
+
+                    # Connexion au serveur MongoDB
+                    client = pymongo.MongoClient("mongodb://192.168.1.174:27017")
+
+                    # Vérification de l'existence de la base de données "TOUTE_OFFRE"
+                    if "TOUTE_OFFRE" in client.list_database_names():
+                        # Connexion à la base de données "TOUTE_OFFRE"
+                        db = client["TOUTE_OFFRE"]
+                    else:
+                        # Création de la base de données "TOUTE_OFFRE"
+                        db = client["TOUTE_OFFRE"]
+                        print("La base de données 'TOUTE_OFFRE' a été créée")
+
+                    # Connexion à la collection "2022-05-15" dans la base de données
+                    collection = db[date]
+                    collection.insert_many(final_result)
+                else:
+                    pass
+
+        except NoSuchElementException:
+            pass
+        
+        driverinstance.quit()
+
+
+
+        dernier_etape_processus = date+".txt"
+        with open(dernier_etape_processus, 'w') as file:
+            file.write(str("8"))
+    
+
+    
+
+def post_emploi_talent(date, etape_processus):
+
+    if  etape_processus <= 7:
+        
+        option = FirefoxOptions()
+        option.add_argument('--disable-notifications')
+        option.add_argument("--mute-audio")
+        option.add_argument("user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1")
+        driverinstance = webdriver.Firefox(options=option)
+
+        initGoogle(driverinstance)
+        driverinstance.get("https://emploi-talent.com/wp-admin")
+        waitloading(1, driverinstance)
+        tryAndRetryFillByXpath(driverinstance, '//input[contains(@id, "user_login")]', str('sauvegarde.pmgroupefrance@gmail.com'))
+        tryAndRetryFillByXpath(driverinstance, '//input[contains(@id, "user_pass")]', str('63t7aK6nTo5LNEW'))
+        tryAndRetryClickXpath(driverinstance, '//input[contains(@id, "wp-submit")]')
+        waitloading(2, driverinstance)
+
+        client = pymongo.MongoClient("mongodb://192.168.1.174:27017")
+        db = client["TOUTE_OFFRE"]  
+        collection = db[date]
+        query = {}
+        cursor = collection.find(query)
+        results = list(cursor)
+        json_data = json.dumps(results)
+        for item in json_data:
+            driverinstance.get("https://emploi-talent.com/wp-admin/post-new.php?post_type=job_listing")
+            waitloading(2, driverinstance)
+            recaptcha(driverinstance, '//button[contains(@aria-label, "Fermez la boite ")]')
+            waitloading(0.5, driverinstance)
+            categories = item["cats"]
+
+            # Divisez la chaîne "categories" en trois parties en utilisant le délimiteur "/"
+            # et affectez-les à des variables distinctes
+            mainCat = str(categories.split('/')[0])
+            secondaryCat = str(categories.split('/')[1])
+            preciseCat = str(categories.split('/')[2])
+
+
+
+
+def lire_ligne_precise():
+
+    index = int(input("Entrez le numéro de la ligne à lire : "))
+
+    df = pd.read_excel('./Populations.xlsx')
+    # Vérifier si le numéro spécifié est valide
+    if index < 0 or index >= len(df):
+        print("Index invalide. Veuillez choisir un index valide.")
+        return
+    
+    # Lire les colonnes spécifiées pour la ligne précise
+    colonnes_demandees = ['Département / GV', 'Profession 1', 'Profession 2', 'Profession 3', 'Catégories', 'Lieu Très Précis']
+    ligne_precise = df.loc[index, colonnes_demandees]
+
+    # Afficher les valeurs lues
+    print("Ligne précise (Index {}):".format(index))
+    print(ligne_precise)
+
+
+def lire_intervalle_tableau():
+    # Ici, vous pouvez implémenter le code pour lire un intervalle de lignes dans le tableau
+    # par exemple, en demandant à l'utilisateur de saisir un début et une fin d'index et en affichant les lignes correspondantes.
+    print('"')
+
+def lire_date_commune_precise():
     J = str(input("Entrez le jour voulu c'est-à-dire 09 ou 23 un jour en chiffre: "))
     M = str(input("Entrez le mois voulu dans le format suivant de 01 à 12, par exemple pour janvier '01': "))
     date = str('2022-'+M+'-'+J+'')
@@ -803,12 +1404,60 @@ def publish():
             
     json_data = json.loads(json_data)
     for item in json_data:
+        # RES
+
+        scrap_site_saveAnnonceIndeed(item['Profession 1'], item['Département / GV'], item['Catégories'], item['Lieu Très Précis'], date , int(etape_processus))
         scrap_site_saveAnnonceAPEC(item['Profession 1'], item['Département / GV'], item['Catégories'], item['Lieu Très Précis'], date , int(etape_processus))
 
-    """"""
+        scrap_site_JobUp(item['Profession 1'], item['Département / GV'], item['Catégories'], item['Lieu Très Précis'], date , int(etape_processus))
+        
+        scrap_site_LINKEDIN(item['Profession 1'], item['Département / GV'], item['Catégories'], item['Lieu Très Précis'], date , int(etape_processus))
+
+        scrap_site_saveAnnoncePE(item['Profession 1'], item['Département / GV'], item['Catégories'], item['Lieu Très Précis'], date , int(etape_processus))
+
+        scrap_site_saveAnnonceHelloWork(item['Profession 1'], item['Département / GV'], item['Catégories'], item['Lieu Très Précis'], date , int(etape_processus))
+
+    """           """
+    post_emploi_talent(date , int(etape_processus))
+    
+    with open(dernier_etape_processus, 'w') as file:
+        file.write(str("0"))
 
     
-publish()
+def publish():
+
+    print("\n                   Bienvenue ! Que souhaitez-vous faire ?\n")
+    print("1. Lire une seule ligne précise du tableau ( ex : juste ligne 323 )\n")
+    print("2. Lire un intervalle de lignes dans le tableau ex : de 100 a 560 \n")
+    print("3. Lire les données correspondant à une date précise ex : 15/02/2023\n")
+
+    choix = int(input("Entrez le numéro de votre choix (1/2/3) : "))
+
+    if choix == 1:
+        lire_ligne_precise()
+    elif choix == 2:
+        lire_intervalle_tableau()
+    elif choix == 3:
+        lire_date_commune_precise()
+    else:
+        print("Choix invalide. Veuillez choisir une option valide (1/2/3).")
+
+
+
+
+
+
+# Connexion au serveur MongoDB
+
+publish() 
+
+
+
+"""input('a1111111111111111')
+driverinstance.switch_to.frame(driverinstance.find_element(By.XPATH, "//iframe"))
+textInMail = remove_tags(getinnertextXpath(driverinstance, "//body"))
+input(textInMail)"""
+
 
 """"while True:
     try:
